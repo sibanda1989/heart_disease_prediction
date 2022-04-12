@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease</title>
+</head>
+<body>
+    <div style="color: blue;">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Medical Record Values</h2>
+
+            <h3>What is the patient's Age?</h3><br>
+            <input id="first" name="Age" type="number" required="required">
+
+            <h3>What is their RestingBP value?</h3><br>
+            <input id="second" name="RestingBP" type="number" required="required">
+
+            <h3>Input the Cholesterol value</h3><br>
+            <input id="third" name="Cholesterol" type="number" required="required">
+
+            <h3>What is the FastingBS value?</h3><br>
+            <input id="fourth" name="FastingBS" type="number" required="required">
+
+            <h3>Input MaxHR value</h3><br>
+            <input id="fifth" name="MaxHR" type="number" required="required">
+
+            <h3>Input OldPeak value</h3><br>
+            <input type="number" id="sixth" name="OldPeak" required="required">
+
+            <h3>Choose patient's Sex</h3><br>
+            <select name="Sex" id="Sex_M" required="required">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <h3>Choose ChestPainType</h3><br>
+            <select name="ChestPainType" id="ChestPainType" required="required">
+                <option value="ATA">ATA</option>
+                <option value="NAP">NAP</option>
+                <option value="TA">TA</option>
+                <option value="ASY"></option>
+            </select>
+
+            <h3>Choose RestingECG</h3><br>
+            <select name="RestingECG" id="RestingECG" required="required">
+                <option value="Normal">Normal</option>
+                <option value="ST">ST</option>
+                <option value="LVH">LVH</option>
+            </select>
+
+            <h3>Choose ExerciseAngina</h3><br>
+            <select name="ExerciseAngina" id="ExerciseAngina_Y">
+                <option value="Y">Y</option>
+                <option value="N">N</option>
+            </select>
+
+            <h3>Select the ST_Slope value</h3>
+            <select name="ST_Slope" id="ST_Slope">
+                <option value="Flat">Flat</option>
+                <option value="Up">Up</option>
+                <option value="Down">Down</option>
+            </select>
+        </form>
+
+    </div>
+</body>
+</html>
