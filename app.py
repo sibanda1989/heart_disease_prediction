@@ -92,7 +92,7 @@ def predict():
         output = prediction[0]
 
         if output == 0:
-            return render_template('index.html', prediction_texts="Patient is unlikely to have Hear Disease")
+            return render_template('index.html', prediction_texts="Patient is unlikely to have Heart Disease")
 
         else:
             return render_template('index.html', prediction_texts="Patient is highly likely to have Heart Disease")    
@@ -100,3 +100,6 @@ def predict():
     else: 
         return render_template("index.html")    
 
+
+if __name__=="__main__":
+    app.run(debug=True)
